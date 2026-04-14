@@ -23,6 +23,10 @@
             color: #34495e;
             margin-top: 30px;
         }
+        h3 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
         .container {
             background: white;
             padding: 30px;
@@ -48,18 +52,24 @@
             margin: 20px 0;
             border-radius: 4px;
         }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: January 2026</p>
+        <p class="last-updated">Last updated: April 2026</p>
         
         <div class="warning">
-            <strong>Important:</strong> This privacy policy complies with Apple App Store requirements and describes how QuestrAI handles camera, photo library, and image data.
+            <strong>Important:</strong> This privacy policy complies with Apple App Store requirements and describes how QuestrAI handles your personal information, camera access, photo library data, and AI processing.
         </div>
         
-        <p>This Privacy Policy describes how QuestrAI collects, uses, and shares your personal information when you use our iOS application (the "App").</p>
+        <p>This Privacy Policy describes how QuestrAI ("we", "our", or "us") collects, uses, and shares your personal information when you use our iOS application (the "App").</p>
         
         <h2>1. Information We Collect</h2>
         
@@ -72,125 +82,205 @@
         </ul>
         
         <h3>1.2 Camera & Photos Access</h3>
-        <p><strong>With your permission</strong>, we access:</p>
+        <p><strong>With your explicit permission</strong>, we access:</p>
         <ul>
-            <li><strong>Camera:</strong> To scan documents and capture images for translation</li>
-            <li><strong>Photo Library:</strong> To select existing photos for scanning/translation</li>
+            <li><strong>Camera:</strong> To scan documents, capture text, and take photos for translation</li>
+            <li><strong>Photo Library:</strong> To select existing photos for scanning and translation</li>
         </ul>
-        <p><em>Note: We only access photos you explicitly select. We do not scan your entire photo library.</em></p>
+        <p><em>Note: We only access photos you explicitly select. We do not scan or upload your entire photo library.</em></p>
         
         <h3>1.3 Image & Text Data</h3>
         <p>When you use scanning or translation features:</p>
         <ul>
-            <li><strong>Images you capture/select</strong> (processed temporarily)</li>
+            <li><strong>Images you capture or select</strong> (processed temporarily)</li>
             <li><strong>Text extracted from images</strong> via Optical Character Recognition (OCR)</li>
+            <li><strong>Mathematical equations</strong> recognized from images</li>
             <li><strong>Translated text</strong> in your chosen language</li>
-            <li><strong>Translated images</strong> you choose to download</li>
+            <li><strong>Translated images</strong> you choose to download to your device</li>
         </ul>
         
         <h3>1.4 Chat & AI Data</h3>
         <ul>
             <li>Your chat questions and AI responses</li>
-            <li>Important messages you save</li>
-            <li>Chat context for conversation continuity</li>
+            <li>Chat context for conversation continuity (previous questions and answers)</li>
+            <li>Important messages you choose to save</li>
+            <li>Selected AI mode (Study, General, Literature, or Chat)</li>
+            <li>Sub-chat follow-up conversations</li>
         </ul>
         
         <h3>1.5 Subscription Information</h3>
         <ul>
             <li>Purchase history via Apple App Store</li>
             <li>Subscription status and expiration dates</li>
-            <li>Trial usage information</li>
+            <li>Trial usage information (number of free chats remaining)</li>
         </ul>
         
         <h2>2. How We Use Your Information</h2>
         <ul>
             <li>To provide scanning, translation, and AI chat functionality</li>
-            <li>To process images and extract text for translation</li>
-            <li>To generate translated versions of images</li>
-            <li>To process subscriptions and prevent fraud</li>
-            <li>To improve AI responses using chat context</li>
+            <li>To process images and extract text using OCR technology</li>
+            <li>To recognize mathematical equations and convert them to text</li>
+            <li>To generate translated versions of images with text overlay</li>
+            <li>To generate AI responses to your questions</li>
+            <li>To maintain chat context for more coherent conversations</li>
+            <li>To process subscriptions and verify purchase status</li>
+            <li>To prevent subscription fraud and enforce trial limits</li>
             <li>To send password reset emails when requested</li>
             <li>To comply with legal obligations</li>
         </ul>
         
         <h2>3. Data Processing & Third-Party Services</h2>
+        <p>We use the following third-party services to provide our App's functionality:</p>
         
         <h3>3.1 Firebase (Google)</h3>
         <p>We use Firebase for:</p>
         <ul>
             <li>Authentication (sign-in services)</li>
-            <li>Cloud Firestore (data storage)</li>
-            <li>Cloud Functions (server-side processing)</li>
+            <li>Cloud Firestore (data storage for chats, saved messages, and account information)</li>
+            <li>Cloud Functions (server-side processing for subscriptions and AI requests)</li>
+            <li>App Check (security verification)</li>
         </ul>
         <p>Firebase's privacy policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
         
         <h3>3.2 DeepSeek AI</h3>
-        <p>Your chat questions are sent to DeepSeek API to generate AI responses.</p>
-        
-        <h3>3.3 Apple Vision & Translation</h3>
-        <p>For scanning and translation features, we use Apple's:</p>
+        <p>We use DeepSeek API (deepseek.com) to generate AI responses to your questions. When you use the chat features, the following information is transmitted to DeepSeek:</p>
         <ul>
-            <li><strong>VisionKit:</strong> For text recognition in images (OCR)</li>
-            <li><strong>Apple Translation API:</strong> For multilingual text translation</li>
-       </ul>
-       <p>All image processing occurs locally on your device. No images or text are sent to Apple's servers.</p>
+            <li>Your question text</li>
+            <li>Previous chat context (for conversation continuity)</li>
+            <li>Selected AI mode (Study, General, Literature, or Chat)</li>
+            <li>Image text for translation features</li>
+        </ul>
+        <p><strong>DeepSeek does NOT receive:</strong> your email address, user ID, subscription status, device information, or any personal identifiers.</p>
+        <p>DeepSeek processes this data according to their privacy policy: <a href="https://platform.deepseek.com/privacy" target="_blank">https://platform.deepseek.com/privacy</a></p>
+        
+        <h3>3.3 Apple Vision & Google Gemini AI</h3>
+        <p>For scanning features, we use:</p>
+        <ul>
+            <li><strong>General Scan:</strong> Uses Apple's VisionKit framework for on-device text recognition (OCR). All processing occurs locally on your device. No images or text are sent to Apple's servers.</li>
+            <li><strong>Math Scan:</strong> Uses Google's Gemini AI API (gemini-2.5-flash-lite) to recognize mathematical equations and convert them to LaTeX format. Images captured in Math Scan mode are transmitted to Google's servers for processing.</li>
+        </ul>
+        <p>Google Gemini AI privacy information: <a href="https://ai.google.dev/privacy" target="_blank">https://ai.google.dev/privacy</a></p>
         
         <h3>3.4 Apple App Store</h3>
-        <p>For subscription purchases, we use Apple's in-app purchase system.</p>
+        <p>For subscription purchases and management, we use Apple's in-app purchase system. Apple processes payments according to their privacy policy: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></p>
+        
+        <h3>3.5 Google Sign-In</h3>
+        <p>If you choose to sign in with Google, Google receives basic profile information (your name and email address) according to their privacy policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+        
+        <h3>3.6 Apple Sign-In</h3>
+        <p>If you choose to sign in with Apple, you can choose to share your email address or use Apple's private relay service. Apple's privacy policy: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></p>
         
         <h2>4. Data Retention & Deletion</h2>
         
         <h3>4.1 Image Data</h3>
         <ul>
-            <li>Original images are processed temporarily and not stored permanently</li>
-            <li>Translated images are stored only if you choose to download them to your device</li>
+            <li><strong>General Scan images:</strong> Processed entirely on your device and never uploaded to our servers</li>
+            <li><strong>Math Scan images:</strong> Transmitted to Google Gemini for processing; we do not store these images permanently</li>
+            <li><strong>Translation images:</strong> Processed temporarily and not stored permanently on our servers</li>
+            <li><strong>Translated images:</strong> Stored only if you choose to download them to your device's photo library</li>
             <li>We do not maintain a permanent copy of your images on our servers</li>
         </ul>
         
-        <h3>4.2 Account Data</h3>
-        <p>We retain your account data for as long as your account is active. You can delete your account and all associated data by:</p>
+        <h3>4.2 Chat Data</h3>
+        <ul>
+            <li>Chat history is stored in your account for your reference</li>
+            <li>Chat context (up to 10 recent messages) is temporarily stored to maintain conversation continuity</li>
+            <li>Important messages you save remain until you delete them</li>
+        </ul>
+        
+        <h3>4.3 Account Data</h3>
+        <p>We retain your account data for as long as your account is active. You can delete your account and all associated data at any time by:</p>
         <ol>
             <li>Opening the QuestrAI app</li>
-            <li>Going to Profile → Delete Account</li>
+            <li>Going to the menu → Profile → Delete Account</li>
+            <li>Confirming your password (for email/password accounts)</li>
         </ol>
+        <p>Upon account deletion:</p>
+        <ul>
+            <li>All chat history is permanently deleted</li>
+            <li>All saved important messages are permanently deleted</li>
+            <li>All chat context is permanently deleted</li>
+            <li>Your user account is removed from our authentication system</li>
+            <li>Trial usage records are retained in anonymized form to prevent abuse</li>
+        </ul>
+        
+        <h3>4.4 Trial Usage Data</h3>
+        <p>To prevent abuse of our free trial system, we retain an anonymized record of trial usage (hashed email identifier and number of chats used) even after account deletion. This record cannot be used to identify you personally.</p>
         
         <h2>5. Your Rights & Choices</h2>
         <ul>
-            <li><strong>Camera/Photo Access:</strong> You can enable/disable in iOS Settings</li>
-            <li><strong>Data Access:</strong> View your data in the app</li>
-            <li><strong>Data Deletion:</strong> Delete your account anytime</li>
-            <li><strong>Data Export:</strong> Contact us to export your data</li>
-            <li><strong>Opt-out:</strong> Unsubscribe from emails</li>
+            <li><strong>Camera Access:</strong> You can enable or disable camera access at any time in iOS Settings → Privacy → Camera</li>
+            <li><strong>Photo Library Access:</strong> You can manage photo access in iOS Settings → Privacy → Photos</li>
+            <li><strong>Data Access:</strong> View your chat history and saved messages within the app</li>
+            <li><strong>Data Deletion:</strong> Delete individual chats, saved messages, or your entire account at any time</li>
+            <li><strong>Data Export:</strong> Contact us to request an export of your data</li>
+            <li><strong>Marketing Communications:</strong> We do not send marketing emails</li>
         </ul>
         
         <h2>6. Children's Privacy</h2>
-        <p>Our App is not intended for children under 13. We do not knowingly collect data from children under 13.</p>
+        <p>Our App is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can delete it.</p>
         
         <h2>7. Security Measures</h2>
-        <p>We implement industry-standard security:</p>
+        <p>We implement industry-standard security measures to protect your data:</p>
         <ul>
-            <li>Encrypted data transmission (SSL/TLS)</li>
-            <li>Secure Firebase authentication</li>
-            <li>Temporary image processing (images not stored long-term)</li>
-            <li>Regular security reviews</li>
+            <li>All data transmission is encrypted using SSL/TLS</li>
+            <li>Secure Firebase authentication with token-based sessions</li>
+            <li>Firebase App Check to prevent unauthorized API access</li>
+            <li>Images are processed temporarily and not stored long-term on our servers</li>
+            <li>Trial usage data is stored using one-way hashed email identifiers (SHA-256)</li>
+            <li>Regular security reviews and updates</li>
         </ul>
         
-        <h2>8. Photo Library & Camera Usage</h2>
-        <p>Our app requests access to:</p>
-        <ul>
-            <li><strong>Camera:</strong> To capture new images for scanning/translation</li>
-            <li><strong>Photo Library:</strong> To select existing images for processing</li>
-        </ul>
-        <p><em>We only access specific photos you choose. We do not access your entire photo library.</em></p>
+        <h2>8. International Data Transfers</h2>
+        <p>Your data may be transferred to and processed in countries where our third-party service providers operate, including the United States (Firebase/Google, DeepSeek). We ensure appropriate safeguards are in place through standard contractual clauses and service provider agreements.</p>
         
         <h2>9. Changes to This Policy</h2>
-        <p>We may update this policy. We will notify you of changes by updating the "Last updated" date.</p>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by:</p>
+        <ul>
+            <li>Updating the "Last updated" date at the top of this policy</li>
+            <li>Displaying an in-app notification for significant changes</li>
+        </ul>
+        <p>Your continued use of the App after changes constitutes acceptance of the updated policy.</p>
         
-        <h2>10. Contact Us</h2>
-        <p>For privacy-related questions or data deletion requests:</p>
-        <p>Email: <a href="mailto:questraiapp@gmail.com">questraiapp@gmail.com</a></p>
+        <h2>10. California Privacy Rights (CCPA)</h2>
+        <p>If you are a California resident, you have the right to:</p>
+        <ul>
+            <li>Know what personal information we collect about you</li>
+            <li>Request deletion of your personal information</li>
+            <li>Opt-out of the sale of personal information (we do not sell personal information)</li>
+            <li>Non-discrimination for exercising your privacy rights</li>
+        </ul>
+        <p>To exercise these rights, please contact us using the information below.</p>
         
-        <p><small>This privacy policy complies with Apple App Store requirements and applicable data protection laws including GDPR and CCPA.</small></p>
+        <h2>11. GDPR Rights (European Users)</h2>
+        <p>If you are in the European Economic Area (EEA), you have the right to:</p>
+        <ul>
+            <li>Access your personal data</li>
+            <li>Rectify inaccurate personal data</li>
+            <li>Erase your personal data ("right to be forgotten")</li>
+            <li>Restrict or object to processing of your personal data</li>
+            <li>Data portability</li>
+            <li>Withdraw consent at any time</li>
+            <li>Lodge a complaint with a supervisory authority</li>
+        </ul>
+        <p>Our legal basis for processing your data is:</p>
+        <ul>
+            <li><strong>Contract:</strong> To provide the App's core functionality</li>
+            <li><strong>Consent:</strong> For camera/photo access and AI processing</li>
+            <li><strong>Legitimate Interest:</strong> To prevent fraud and enforce trial limits</li>
+        </ul>
+        
+        <h2>12. Contact Us</h2>
+        <p>For privacy-related questions, data access requests, or to exercise your rights:</p>
+        <p><strong>Email:</strong> <a href="mailto:questraiapp@gmail.com">questraiapp@gmail.com</a></p>
+        <p>We will respond to all requests within 30 days as required by applicable law.</p>
+        
+        <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+        
+        <p style="font-size: 12px; color: #666;">
+            QuestrAI is developed and operated by Sahil.<br>
+            This privacy policy complies with Apple App Store requirements, GDPR (EU), CCPA (California), and other applicable data protection laws.
+        </p>
     </div>
 </body>
 </html>
